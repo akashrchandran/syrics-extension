@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "Syrics - Spotify Lyrics Downloader",
+  "version": "1.0.0",
+  "description": "Download lyrics from Spotify tracks with ease. Adds a download lyrics option to Spotify's three-dot menu.",
+  "author": "Based on Syrics by Akash R. Chandran",
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "storage",
+    "downloads",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://open.spotify.com/*",
+    "https://spclient.wg.spotify.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://open.spotify.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Syrics Lyrics Downloader"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "injected.js"
+      ],
+      "matches": [
+        "https://open.spotify.com/*"
+      ]
+    }
+  ]
+}
