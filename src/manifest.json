@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
   "name": "Syrics - Spotify Lyrics Downloader",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Download lyrics from Spotify tracks with ease. Adds a download lyrics option to Spotify's three-dot menu.",
-  "author": "Based on Syrics by Akash R. Chandran",
+  "author": "Akash R. Chandran",
   "icons": {
     "128": "icons/icon128.png"
   },
@@ -15,7 +15,8 @@
   ],
   "host_permissions": [
     "https://open.spotify.com/*",
-    "https://spclient.wg.spotify.com/*"
+    "https://spclient.wg.spotify.com/*",
+    "https://api.spotify.com/*"
   ],
   "content_scripts": [
     {

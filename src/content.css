@@ -1,0 +1,63 @@
+/* Syrics Extension Content Styles */
+
+/* Hide any Syrics elements by default */
+[data-syrics-download] {
+  display: flex !important;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+[data-syrics-download]:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Notification styles */
+.syrics-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  color: white;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  z-index: 10000;
+  max-width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease-out;
+}
+
+.syrics-notification.success {
+  background: #1db954;
+}
+
+.syrics-notification.error {
+  background: #e22134;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.syrics-icon {
+  width: 16px !important;
+  height: 16px !important;
+  fill: currentColor !important;
+  flex-shrink: 0 !important;
+  margin-right: 8px !important;
+}
+
+.syrics-text {
+  font-size: 14px;
+  color: white;
+  margin-left: 0px;
+}
